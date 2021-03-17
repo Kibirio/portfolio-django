@@ -1,0 +1,47 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio | Harryx</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/owl.carousel.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/flaticon.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+</head>
+<body>
+{% include 'main/includes/sidebar.html' %}
+
+    {% block content %}{% endblock content %}
+
+<div class="footer container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="footer-text">
+                <p class="">copyright 2021 John Doe</p>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- <div class="button-up">
+        <i class="fas fa-chevron-up"></i>
+    </div> -->
+
+</div>
+
+<script src="{% static 'main/js/jquery.min.js' %}"></script>
+<script src="{% static 'main/js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'main/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'main/js/popper.min.js' %}"></script>
+<script src="{% static 'main/js/typed.js' %}"></script>
+<script src="{% static 'main/js/main.js' %}"></script>
+
+
+</body>
+</html>

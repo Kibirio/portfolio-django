@@ -1,0 +1,50 @@
+@font-face {
+    font-family: "flaticon";
+    src: url("./flaticon.ttf?44ed443efdd9c2bdae432b3d499d0120") format("truetype"),
+url("./flaticon.woff?44ed443efdd9c2bdae432b3d499d0120") format("woff"),
+url("./flaticon.woff2?44ed443efdd9c2bdae432b3d499d0120") format("woff2"),
+url("./flaticon.eot?44ed443efdd9c2bdae432b3d499d0120#iefix") format("embedded-opentype"),
+url("./flaticon.svg?44ed443efdd9c2bdae432b3d499d0120#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-call:before {
+    content: "\f101";
+}
+.flaticon-complain:before {
+    content: "\f102";
+}
+.flaticon-cv:before {
+    content: "\f103";
+}
+.flaticon-home:before {
+    content: "\f104";
+}
+.flaticon-new-email-closed-back-envelope-outlined-symbol:before {
+    content: "\f105";
+}
+.flaticon-notes:before {
+    content: "\f106";
+}
+.flaticon-placeholder:before {
+    content: "\f107";
+}
+.flaticon-system:before {
+    content: "\f108";
+}
+.flaticon-user-1:before {
+    content: "\f109";
+}
+.flaticon-user:before {
+    content: "\f10a";
+}
