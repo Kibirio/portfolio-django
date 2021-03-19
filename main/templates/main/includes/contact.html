@@ -1,4 +1,5 @@
 <!-- Contacts -->
+{% load crispy_forms_tags %}
 <div class="contact" id="contact">
     <div class="container">
         <div class="row justify-content-center">
@@ -47,6 +48,7 @@
                 </div>
             </div>
         </div>
+        <div id="alert-box"></div>
         <div class="row">
             <div class="col-md-6">
                 <div class="home-page-form">
@@ -54,41 +56,10 @@
                         <form action="" id="contact-form">
                             <div class="controls">
                                 <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="name" name="name"
-                                                   placeholder="Name*" required="required"
-                                                   data-error="Name is required">
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="email" class="form-control" id="email" name="email"
-                                                   placeholder="Email*" required="required"
-                                                   data-error="Valid email is required">
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
                                     <div class="col-md-12">
-                                        <div class="form-group">
-                                            <input type="text" id="subject" class="form-control" name="subject"
-                                                   placeholder="Subject*" required="required"
-                                                   data-error="Subject is required">
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                                            <textarea name="message" id="message" cols="" rows="7"
-                                                                      class="form-control" required="required"
-                                                                      placeholder="Message*"
-                                                                      data-error="please, leave a message"></textarea>
-                                            <div class="help-block with-errors"></div>
+                                        <div class="">
+                                            {% csrf_token %}
+                                            {{ form|crispy}}
                                         </div>
                                     </div>
                                     <div class="col-md-12">
@@ -100,15 +71,16 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-md-6">
                 <div class="google-map">
-                    <iframe width="500" height="350" id="gmap_canvas"
+                    <iframe width="" height="" id="gmap_canvas"
                             src="https://maps.google.com/maps?q=kakamega%20masinde%20muliro%20kenya&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0" frameborder="0"
-                            style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                         frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                          style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 
-                </div>
+              </div>
             </div>
-        </div>
-    </div>
+       </div>
 </div>
+</div>
+

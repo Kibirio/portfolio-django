@@ -1,13 +1,5 @@
 $(function ($) {
-    // "use strict";/
-
-    $('.anchor').on('click', function() {
-        if ('li.class' === 'active')
-            $('li').removeClass('.active');
-        else    
-            $(this).closest('li').addClass('.active');
-    });
-
+    "use strict";
     jQuery(document).ready(function () {
 
         // Typed js
@@ -24,12 +16,9 @@ $(function ($) {
             // time before backspacing
             backDelay: 1200,
             // loop
-            loop: true,
+            loop: true
         });
-
-
     });
-
     $('#testimonial-carousel').owlCarousel({
         autoplay:true,
         dots:false,
@@ -48,7 +37,7 @@ $(function ($) {
                 items:2
             }
         }
-    })
+    });
 
     $('#blog-carousel').owlCarousel({
         autoplay:true,
@@ -69,25 +58,8 @@ $(function ($) {
             }
         }
     });
-
-     $('#home-carousel').owlCarousel({
-        autoplay:true,
-        dots:false,
-        loop:true,
-        margin:10,
-        nav:true,
-        responsive:{
-            0:{
-                items:1
-            },
-            600:{
-                items:1
-            },
-            1000:{
-                items:1
-            }
-        }
-    });
-
-
 });
+
+
+
+

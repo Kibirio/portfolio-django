@@ -1,5 +1,5 @@
 $(function ($) {
-    // "use strict";/
+    "use strict";
 
     $('.anchor').on('click', function() {
         if ('li.class' === 'active')
@@ -91,3 +91,38 @@ $(function ($) {
 
 
 });
+
+const alertBox = document.getElementById('alert-box')
+const form = document.getElementById('contact-form')
+const name = document.getElementById('id_name')
+const email = document.getElementById('id_email')
+const subject = document.getElementById('id_subject')
+const message = document.getElementById('id_message') 
+const cstoken = document.getElementsByName('csrfmiddlewaretoken')
+const url = ""
+form.addEventListener('submit', e=> {
+    e.preventDefault()
+
+    const formData = new FormData()
+    formData.append('csrfmiddlewaretoken', cstoken[0].value)
+    formData.append('name', name.value)
+    formData.append('email', email.value)
+    formData.append('subject', subject.value)
+
+    ajax({
+        type: 'POST', 
+        url: url,
+        data: formData,
+        success: function(response){
+            console.log(response)
+        },
+        error: function(error){
+            console.log(error)
+        },
+        cache: false,
+        contentType: false,
+        processData: false,
+    })
+})
+
+
