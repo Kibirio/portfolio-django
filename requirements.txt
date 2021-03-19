@@ -1,5 +1,6 @@
 asgiref==3.3.1
 Django==3.1.7
+django-crispy-forms==1.11.1
 django-extensions==3.1.1
 environ==1.0
 gunicorn==20.0.4
