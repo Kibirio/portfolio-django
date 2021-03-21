@@ -10,9 +10,10 @@
     <title>Portfolio | Harryx</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="{% static 'main/css/owl.carousel.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'main/css/flaticon.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'main/css/bootstrap.min.css' %}">
+    <!-- <link rel="stylesheet" type="text/css" href="{% static 'main/css/bootstrap.min.css' %}"> -->
     <link rel="stylesheet" type="text/css" href="{% static 'main/css/style.css' %}">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
@@ -39,33 +40,91 @@
 </div>
 
 
-{#<script src="{% static 'main/js/jquery.min.js' %}"></script>#}
+<!-- <script src="{% static 'main/js/jquery.min.js' %}"></script> -->
 <script src="{% static 'main/js/owl.carousel.min.js' %}"></script>
-<script src="{% static 'main/js/bootstrap.min.js' %}"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- <script src="{% static 'main/js/bootstrap.min.js' %}"></script> -->
 <script src="{% static 'main/js/popper.min.js' %}"></script>
 <script src="{% static 'main/js/typed.js' %}"></script>
 <script src="{% static 'main/js/main.js' %}"></script>
-<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
+<!-- <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script> -->
 
 <script type="text/javascript">
-    $(document).on('submit', '#contact-form', function(e) {
-        e.preventDefault();
+
+    const alertBox = document.getElementById('alert-box')
+    const form = document.getElementById('contact-form')
+
+    const name = document.getElementById('id_name')
+    const email = document.getElementById('id_email')
+    const subject = document.getElementById('id_subject')
+    const message = document.getElementById('id_message')
+
+    const csrf = document.getElementsByName('csrfmiddlewaretoken')
+    // console.log(csrf)
+
+    const url = ""
+
+    const handleAlerts = (type, text) => {
+            alertBox.innerHTML = `<div class="alert alert-${type}" role="alert"> ${text} </div>`
+        }
+
+    form.addEventListener('submit', e=>{
+        e.preventDefault()
+        const fd = new FormData()
+        fd.append('csrfmiddlewaretoken', csrf[0].value)
+        fd.append('name', name.value)
+        fd.append('email', email.value)
+        fd.append('subject', subject.value)
+        fd.append('message', message.value)
 
         $.ajax({
-            type:'POST',
-            url: '/create',
-            data: {
-                name:$('#id_name').val(),
-                email:$('#id_email').val(),
-                subject:$('#id_subject').val(),
-                message:$('#id_message').val(),
-                csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+            type: 'POST',
+            url: url,
+            data: fd,
+            success: function(response){
+                console.log(response)
+                console.log(alertBox)
+                sText = `${response.name}, message successfully sent...`
+                handleAlerts('success', sText)
+                setTimeout(() =>{
+                    alertBox.innerHTML = ""
+                    name.value = ""
+                    email.value = ""
+                    subject.value = ""
+                    message.value = ""
+                }, 3000)
             },
-            success: function(data){
-                $('#alert-box').innerHtml(`<div class="alert alert-success">thank kamau</div>`);
-            }
+            cache: false,
+            contentType: false,
+            processData: false,
         })
     })
+
+    // console.log(form)
+    // $(document).on('submit', '#contact-form', function(e) {
+    //     e.preventDefault();
+
+    //     const handleAlerts = (type, text) => {
+    //         alertBox.innerHtml = `<div class="alert alert-${type}" role="alert"> ${text} </div>`
+    //     }
+
+    //     $.ajax({
+    //         type:'POST',
+    //         url: '/create',
+    //         data: {
+    //             name:$('#id_name').val(),
+    //             email:$('#id_email').val(),
+    //             subject:$('#id_subject').val(),
+    //             message:$('#id_message').val(),
+    //             csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+    //         },
+    //         success: function(response){
+    //             const sText = `${name} your Message received successfully`
+    //             handleAlerts('success', sText)
+    //         }
+    //     })
+    // })
 </script>
 
 
