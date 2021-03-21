@@ -621,6 +621,10 @@ ul li{
     background: #555;
 }
 
+.progress-bar {
+    background-color: var(--secondary) !important;
+}
+
 /* Skills & Languages end*/
 
 /* Skills-pro & knowledge start */
@@ -681,7 +685,7 @@ ul li{
 }
 
 .circle-progress .rotate {
-    background-color: #4285f4 !important;
+    background-color: var(--secondary) !important;
     clip: rect(0 50px 100px 0);
 }
 
@@ -692,14 +696,14 @@ ul li{
 }
 
 .circle-progress .right {
-    background-color: #4285f4 !important;
+    background-color: var(--secondary) !important;
     clip: rect(0 50px 100px 0);
     transform: rotate(180deg);
     opacity: 0;
 }
 
 .circle-progress div span {
-    background-color: #353353;
+    background-color: var(--background);
     position: absolute;
     font-family: "Poppins", sans-serif !important;
     font-size: 18px;
@@ -719,7 +723,7 @@ ul li{
     font-weight: 900;
     content: "";
     left: 0px;
-    color: #4285f4;
+    color: var(--secondary);
 }
 
 .knowledge-list {

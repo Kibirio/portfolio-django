@@ -69,7 +69,6 @@ $(function ($) {
 
 
 });
-new WOW().init();
 // window.sr = ScrollReveal();
 //     sr.reveal('.icon-info', {
 //     duration: 2000,

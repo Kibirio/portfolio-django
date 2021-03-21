@@ -12,8 +12,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="{% static 'main/css/owl.carousel.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'main/css/flaticon.css' %}">
-    <!-- <link rel="stylesheet" type="text/css" href="{% static 'main/css/bootstrap.min.css' %}"> -->
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/flaticon.css' %}">\
     <link rel="stylesheet" type="text/css" href="{% static 'main/css/style.css' %}">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
@@ -40,17 +39,15 @@
 </div>
 
 
-<!-- <script src="{% static 'main/js/jquery.min.js' %}"></script> -->
 <script src="{% static 'main/js/owl.carousel.min.js' %}"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<!-- <script src="{% static 'main/js/bootstrap.min.js' %}"></script> -->
 <script src="{% static 'main/js/popper.min.js' %}"></script>
 <script src="{% static 'main/js/typed.js' %}"></script>
 <script src="{% static 'main/js/main.js' %}"></script>
 
-<!-- <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script> -->
-
 <script type="text/javascript">
+
+    new WOW().init();
 
     const alertBox = document.getElementById('alert-box')
     const form = document.getElementById('contact-form')
@@ -93,7 +90,7 @@
                     email.value = ""
                     subject.value = ""
                     message.value = ""
-                }, 3000)
+                }, 7000)
             },
             cache: false,
             contentType: false,

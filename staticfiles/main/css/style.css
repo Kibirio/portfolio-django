@@ -10,7 +10,7 @@
 /*.wow { visibility: hidden; }*/
 
 #alert-box {
-    
+
 }
 html, body{
     -webkit-text-size-adjust: 100%;
@@ -41,7 +41,7 @@ h3{
 }
 
 h4{
-    font-size: 22px;
+    font-size: 17px;
     line-height: 1.2380952381;
 }
 
@@ -624,6 +624,10 @@ ul li{
     background: #555;
 }
 
+.progress-bar .progress-bar-striped .progress-bar-animated{
+    background-color: #fff !important;
+}
+
 /* Skills & Languages end*/
 
 /* Skills-pro & knowledge start */
@@ -934,6 +938,10 @@ ul li{
 .blog-content ul {
     padding: 0;
     margin: 0;
+}
+
+.blog-content > a > h4 {
+    font-size: 20px !important;
 }
 
 .all-blogs-btn {

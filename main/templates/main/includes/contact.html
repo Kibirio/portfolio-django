@@ -21,7 +21,7 @@
                     </div>
                     <div class="content-info">
                         <h5>Phone Number</h5>
-                        <p>+254710456789 / +254755658139</p>
+                        <p>+254710723047 / +254755658139</p>
                     </div>
                 </div>
             </div>
@@ -52,22 +52,22 @@
             <div class="col-md-6">
                 <div class="home-page-form">
                     <div class="contact-form">
-                        <div id="alert-box"></div>
-                        <form id="contact-form" autocomplete="off">
+                        <div id=""></div>
+                        <form id="contact-form" class="wow fadeInUp" autocomplete="off">
                             <div class="controls">
                                 <div class="row">
                                     <div class="col-md-12">
+                                        <div id="alert-box"></div>
                                         <div class="">
                                             {% csrf_token %}
                                             {{ form|crispy}}
                                         </div>
+
                                     </div>
-                                    <div class="col-md-12">
-                                        <button type="submit" class="mybtn3 mybtn-bg"><span>Send message</span></button>
+                                    <div class="col-md-12 wow fadeInUp">
+                                        <button  type="submit" class="mybtn3 mybtn-bg"><span>Send message</span></button>
                                     </div>
-                                   <!--  <div class="col-md-12 ">
-                                        <h5 id="alert-box"></h5>
-                                    </div> -->
+                                        
                                 </div>
                             </div>
                         </form>
@@ -77,11 +77,11 @@
             </div>
             <div class="col-md-6">
                 <div class="google-map">
-                    <!-- <iframe width="" height="" id="gmap_canvas"
+                    <iframe width="" height="" id="gmap_canvas"
                             src="https://maps.google.com/maps?q=kakamega%20masinde%20muliro%20kenya&t=&z=13&ie=UTF8&iwloc=&output=embed"
                          frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
                           style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
-                        </iframe> -->
+                        </iframe>
               </div>
             </div>
        </div>
