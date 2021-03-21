@@ -1,3 +1,5 @@
+
+
 $(function ($) {
     "use strict";
     jQuery(document).ready(function () {
@@ -58,7 +60,24 @@ $(function ($) {
             }
         }
     });
+
+
+
+    // $(window).on('load', function() {
+    //     new WOW().init();
+    // })
+
+
 });
+new WOW().init();
+// window.sr = ScrollReveal();
+//     sr.reveal('.icon-info', {
+//     duration: 2000,
+//     origin: 'top',
+//     distance: '300px'
+// });
+
+
 
 
 

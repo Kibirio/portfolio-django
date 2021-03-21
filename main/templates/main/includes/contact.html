@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-12">
-                <div class="section-heading">
+                <div class="section-heading wow fadeInUp">
                     <h2 class="title">
                         Get
                         <span class="color">in Touch</span>
@@ -15,7 +15,7 @@
         </div>
         <div class="row">
             <div class="col-md-4">
-                <div class="single-info">
+                <div class="single-info wow fadeInUp">
                     <div class="icon-info">
                         <i class="flaticon-call"></i>
                     </div>
@@ -26,8 +26,8 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="single-info">
-                    <div class="icon-info">
+                <div class="single-info wow fadeInUp">
+                    <div class="icon-info ">
                         <i class="flaticon-new-email-closed-back-envelope-outlined-symbol"></i>
                     </div>
                     <div class="content-info">
@@ -37,7 +37,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="single-info">
+                <div class="single-info wow fadeInUp">
                     <div class="icon-info">
                         <i class="flaticon-placeholder"></i>
                     </div>
@@ -48,14 +48,15 @@
                 </div>
             </div>
         </div>
-        <div id="alert-box"></div>
+
         <div class="row">
             <div class="col-md-6">
                 <div class="home-page-form">
                     <div class="contact-form">
-                        <form action="" id="contact-form">
+                        <form id="contact-form" autocomplete="on">
                             <div class="controls">
                                 <div class="row">
+                                    <h5 id="alert-box"></h5>
                                     <div class="col-md-12">
                                         <div class="">
                                             {% csrf_token %}
