@@ -22,6 +22,10 @@ html, body{
     scroll-behavior: smooth;
 }
 
+.owl-carousel .owl-nav button.owl-prev, .owl-next {
+    display: none;
+}
+
 h1{
     font-size: 60px;
     line-height: 1.08333333;
@@ -416,7 +420,7 @@ ul li{
     transform: translate(-50% -50%);
     font-size: 85px;
     opacity: 0.05;
-    left: -20%;
+    left: -45%;
     top: 10%;
     text-transform: uppercase;
 }
