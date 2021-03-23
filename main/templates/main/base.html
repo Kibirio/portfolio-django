@@ -27,7 +27,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="footer-text">
-                <p class="">copyright 2021 Harrison Ruiru</p>
+                <p class="">copyright 2021 Harrison Ruiru | <span style="color: rgb(230, 67, 152);;">{{ count }} </span>visitors</p>
             </div>
 
         </div>
@@ -41,7 +41,6 @@
 
 
 <script src="{% static 'main/js/owl.carousel.min.js' %}"></script>
-<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
 <script src="{% static 'main/js/bootstrap.min.js' %}"></script>
 <script src="{% static 'main/js/popper.min.js' %}"></script>
 <script src="{% static 'main/js/typed.js' %}"></script>
@@ -100,30 +99,6 @@
         })
     })
 
-    // console.log(form)
-    // $(document).on('submit', '#contact-form', function(e) {
-    //     e.preventDefault();
-
-    //     const handleAlerts = (type, text) => {
-    //         alertBox.innerHtml = `<div class="alert alert-${type}" role="alert"> ${text} </div>`
-    //     }
-
-    //     $.ajax({
-    //         type:'POST',
-    //         url: '/create',
-    //         data: {
-    //             name:$('#id_name').val(),
-    //             email:$('#id_email').val(),
-    //             subject:$('#id_subject').val(),
-    //             message:$('#id_message').val(),
-    //             csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
-    //         },
-    //         success: function(response){
-    //             const sText = `${name} your Message received successfully`
-    //             handleAlerts('success', sText)
-    //         }
-    //     })
-    // })
 </script>
 
 
