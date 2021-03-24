@@ -27,7 +27,6 @@ $(function ($) {
         loop:true,
         // margin:10,
         nav:true,
-        navText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>'],
         responsive:{
             0:{
                 items:1
@@ -47,7 +46,6 @@ $(function ($) {
         loop:true,
         margin:10,
         nav:true,
-        // navText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>'],
         responsive:{
             0:{
                 items:1
@@ -69,6 +67,7 @@ $(function ($) {
 
 
 });
+new WOW().init();
 // window.sr = ScrollReveal();
 //     sr.reveal('.icon-info', {
 //     duration: 2000,

@@ -9,9 +9,6 @@
 
 /*.wow { visibility: hidden; }*/
 
-#alert-box {
-
-}
 html, body{
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
@@ -23,6 +20,10 @@ html, body{
     background-color: var(--background);
     max-width: 100%;
     scroll-behavior: smooth;
+}
+
+.owl-carousel .owl-nav button.owl-prev, .owl-next {
+    display: none;
 }
 
 h1{
@@ -41,7 +42,7 @@ h3{
 }
 
 h4{
-    font-size: 17px;
+    font-size: 22px;
     line-height: 1.2380952381;
 }
 
@@ -373,12 +374,11 @@ ul li{
     overflow: hidden;
     display: block;
     margin: 0 auto;
-    padding: 20px;
     text-align: center;
     box-shadow: 0px 5px 20px 0px rgba(71, 69, 97, 0.7);
     position: relative;
     /*padding: 25px 30px 30px;*/
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .about-image img{
@@ -419,7 +419,7 @@ ul li{
     transform: translate(-50% -50%);
     font-size: 85px;
     opacity: 0.05;
-    left: -20%;
+    left: -40%;
     top: 10%;
     text-transform: uppercase;
 }
@@ -624,8 +624,8 @@ ul li{
     background: #555;
 }
 
-.progress-bar .progress-bar-striped .progress-bar-animated{
-    background-color: #fff !important;
+.progress-bar {
+    background-color: var(--secondary) !important;
 }
 
 /* Skills & Languages end*/
@@ -688,7 +688,7 @@ ul li{
 }
 
 .circle-progress .rotate {
-    background-color: #4285f4 !important;
+    background-color: var(--secondary) !important;
     clip: rect(0 50px 100px 0);
 }
 
@@ -699,14 +699,14 @@ ul li{
 }
 
 .circle-progress .right {
-    background-color: #4285f4 !important;
+    background-color: var(--secondary) !important;
     clip: rect(0 50px 100px 0);
     transform: rotate(180deg);
     opacity: 0;
 }
 
 .circle-progress div span {
-    background-color: #353353;
+    background-color: var(--background);
     position: absolute;
     font-family: "Poppins", sans-serif !important;
     font-size: 18px;
@@ -726,7 +726,7 @@ ul li{
     font-weight: 900;
     content: "";
     left: 0px;
-    color: #4285f4;
+    color: var(--secondary);
 }
 
 .knowledge-list {
@@ -938,10 +938,6 @@ ul li{
 .blog-content ul {
     padding: 0;
     margin: 0;
-}
-
-.blog-content > a > h4 {
-    font-size: 20px !important;
 }
 
 .all-blogs-btn {
